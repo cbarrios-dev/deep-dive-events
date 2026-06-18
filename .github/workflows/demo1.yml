@@ -14,10 +14,8 @@ on:
       - main
       - "dev-*" # dev-new dev-this
       - "feat/**" # feature/one feature/one/v1
-    paths-ignore:
-      - ".github/workflows/**"
-    # paths:
-    #   - "src/**"
+    paths-ignore: # only can have paths or paths-ignore, not both
+      - ".github/workflows/*"
 
 jobs:
   deploy:
