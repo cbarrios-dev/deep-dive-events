@@ -7,17 +7,17 @@ on:
     branches:
       - main
       - "dev-*" # dev-new dev-this
-      - "feature/**" # feature/one feature/one/v1
+      - "feat/**" # feature/one feature/one/v1
   workflow_dispatch:
   push:
     branches:
       - main
       - "dev-*" # dev-new dev-this
-      - "feature/**" # feature/one feature/one/v1
+      - "feat/**" # feature/one feature/one/v1
     paths-ignore:
       - ".github/workflows/**"
-    paths:
-      - "src/**"
+    # paths:
+    #   - "src/**"
 
 jobs:
   deploy:
