@@ -4,7 +4,18 @@ on:
   pull_request:
     types:
       - opened
+    branches:
+      - main
+      - "dev-*" # dev-new dev-this
+      - "feat/**" # feature/one feature/one/v1
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - "dev-*" # dev-new dev-this
+      - "feat/**" # feature/one feature/one/v1
+    paths-ignore: # only can have paths or paths-ignore, not both
+      - ".github/workflows/*"
 
 jobs:
   deploy:
